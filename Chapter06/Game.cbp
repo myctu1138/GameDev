@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Game" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="Debug/Game" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug/" />
+				<Option deps_output="Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_LIB" />
+					<Add option="-O0" />
+					<Add option="-Wall" />
+					<Add directory="../external/SDL/include/" />
+					<Add directory="../external/GLEW/include/" />
+					<Add directory="../external/SOIL/include/" />
+					<Add directory="../external/rapidjson/include/" />
+				</Compiler>
+				<Linker>
+					<Add library="opengl32.lib" />
+					<Add library="SDL2.lib" />
+					<Add library="SDL2main.lib" />
+					<Add library="SDL2_ttf.lib" />
+					<Add library="SDL2_mixer.lib" />
+					<Add library="SDL2_image.lib" />
+					<Add library="glew32.lib" />
+					<Add library="SOIL.lib" />
+					<Add library="winmm.lib" />
+					<Add library="comctl32.lib" />
+					<Add library="kernel32.lib" />
+					<Add library="user32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winspool.lib" />
+					<Add library="comdlg32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="ole32.lib" />
+					<Add library="oleaut32.lib" />
+					<Add library="uuid.lib" />
+					<Add library="odbc32.lib" />
+					<Add library="odbccp32.lib" />
+					<Add directory="../external/SDL/lib/win/x86/" />
+					<Add directory="../external/GLEW/lib/win/x86/" />
+					<Add directory="../external/SOIL/lib/win/x86/" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='xcopy &quot;\..\external\SDL\lib\win\x86\*.dll&quot; &quot;Debug\&quot; \i \s \y&#x0A;xcopy &quot;\..\external\GLEW\lib\win\x86\*.dll&quot; &quot;Debug\&quot; \i \s \y' />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="Release/Game" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release/" />
+				<Option deps_output="Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-D_LIB" />
+					<Add option="-O1" />
+					<Add option="-Wall" />
+					<Add directory="../external/SDL/include/" />
+					<Add directory="../external/GLEW/include/" />
+					<Add directory="../external/SOIL/include/" />
+					<Add directory="../external/rapidjson/include/" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="opengl32.lib" />
+					<Add library="SDL2.lib" />
+					<Add library="SDL2main.lib" />
+					<Add library="SDL2_ttf.lib" />
+					<Add library="SDL2_mixer.lib" />
+					<Add library="SDL2_image.lib" />
+					<Add library="glew32.lib" />
+					<Add library="SOIL.lib" />
+					<Add library="winmm.lib" />
+					<Add library="comctl32.lib" />
+					<Add library="kernel32.lib" />
+					<Add library="user32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winspool.lib" />
+					<Add library="comdlg32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="ole32.lib" />
+					<Add library="oleaut32.lib" />
+					<Add library="uuid.lib" />
+					<Add library="odbc32.lib" />
+					<Add library="odbccp32.lib" />
+					<Add directory="../external/SDL/lib/win/x86/" />
+					<Add directory="../external/GLEW/lib/win/x86/" />
+					<Add directory="../external/SOIL/lib/win/x86/" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='xcopy &quot;\..\external\SDL\lib\win\x86\*.dll&quot; &quot;Release\&quot; \i \s \y&#x0A;xcopy &quot;\..\external\GLEW\lib\win\x86\*.dll&quot; &quot;Release\&quot; \i \s \y' />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Unit filename="Actor.cpp" />
+		<Unit filename="Actor.h" />
+		<Unit filename="CameraActor.cpp" />
+		<Unit filename="CameraActor.h" />
+		<Unit filename="CircleComponent.cpp" />
+		<Unit filename="CircleComponent.h" />
+		<Unit filename="Component.cpp" />
+		<Unit filename="Component.h" />
+		<Unit filename="Game.cpp" />
+		<Unit filename="Game.h" />
+		<Unit filename="Main.cpp" />
+		<Unit filename="Math.cpp" />
+		<Unit filename="Math.h" />
+		<Unit filename="Mesh.cpp" />
+		<Unit filename="Mesh.h" />
+		<Unit filename="MeshComponent.cpp" />
+		<Unit filename="MeshComponent.h" />
+		<Unit filename="MoveComponent.cpp" />
+		<Unit filename="MoveComponent.h" />
+		<Unit filename="PlaneActor.cpp" />
+		<Unit filename="PlaneActor.h" />
+		<Unit filename="Renderer.cpp" />
+		<Unit filename="Renderer.h" />
+		<Unit filename="Shader.cpp" />
+		<Unit filename="Shader.h" />
+		<Unit filename="Shaders/BasicMesh.frag" />
+		<Unit filename="Shaders/BasicMesh.vert" />
+		<Unit filename="Shaders/Phong.frag" />
+		<Unit filename="Shaders/Phong.vert" />
+		<Unit filename="Shaders/Sprite.frag" />
+		<Unit filename="Shaders/Sprite.vert" />
+		<Unit filename="SpriteComponent.cpp" />
+		<Unit filename="SpriteComponent.h" />
+		<Unit filename="Texture.cpp" />
+		<Unit filename="Texture.h" />
+		<Unit filename="VertexArray.cpp" />
+		<Unit filename="VertexArray.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
